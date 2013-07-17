@@ -10,7 +10,7 @@ Usage
 ==========
 
 ```html
-<script type="text/javascript" src="fontchecker.js"></script>
+<script type="text/javascript" src="hasfont.min.js"></script>
 ```
 
 ```javascript
