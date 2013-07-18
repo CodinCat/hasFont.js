@@ -26,9 +26,6 @@ var hasFont = (function (d) {
     checker1.s.fontFamily = fontName + ', monospace';
     checker2.s.fontFamily = 'monospace';
 
-    checker1.setAttribute('id', '_has_font_1');
-    checker2.setAttribute('id', '_has_font_2');
-
     checker1.innerHTML = testText;
     checker2.innerHTML = testText;
 
