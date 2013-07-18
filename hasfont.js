@@ -1,6 +1,6 @@
 /*
   hasFont.js: https://github.com/MrOPR/hasFont.js
-  version: 1.0
+  version: 1.1
 */
 var hasFont = (function (d) {
   var checker1 = d.createElement('span'),
@@ -26,11 +26,18 @@ var hasFont = (function (d) {
     checker1.s.fontFamily = fontName + ', monospace';
     checker2.s.fontFamily = 'monospace';
 
+    checker1.setAttribute('id', '_has_font_1');
+    checker2.setAttribute('id', '_has_font_2');
+
     checker1.innerHTML = testText;
     checker2.innerHTML = testText;
 
     d.body.appendChild(checker1);
     d.body.appendChild(checker2);
+  }
+  function removeChecker() {
+    d.body.removeChild(checker1);
+    d.body.removeChild(checker2);
   }
 
   function removeSymbols(str) {
@@ -55,6 +62,7 @@ var hasFont = (function (d) {
     setupChecker(fontName);
     
     if (check()) {
+      removeChecker();
       return true;
     }
     else {
@@ -63,10 +71,11 @@ var hasFont = (function (d) {
       checker2.s.fontFamily = 'sans-serif';
       
       if (check()) {
+        removeChecker();
         return true;
       }
     }
-
+    removeChecker();
     return false;
   };
 }(document));
