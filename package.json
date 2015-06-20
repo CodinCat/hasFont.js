@@ -1,0 +1,23 @@
+{
+  "name": "has-font",
+  "version": "1.0.0",
+  "description": "Detect a font is available or not",
+  "main": "hasfont.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodinCat/hasFont.js.git"
+  },
+  "keywords": [
+    "client",
+    "browser",
+    "util",
+    "font"
+  ],
+  "author": "CodinCat <a55951234@gmail.com> (https://github.com/CodinCat)",
+  "homepage": "https://github.com/CodinCat/hasFont.js",
+  "files": [
+    "hasfont.js",
+    "hasfont.min.js",
+    "LICENSE"
+  ]
+}
