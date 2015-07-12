@@ -2,7 +2,19 @@
   hasFont.js: https://github.com/MrOPR/hasFont.js
   version: 1.1
 */
-var hasFont = (function (d) {
+(function (root, factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define([], factory);
+	} else if (typeof exports === 'object') {
+		// Node.
+		module.exports = factory();
+	} else {
+		// Browser globals (root is window)
+		root.hasFont = factory();
+	}
+}(this, function () {
+  var d = document;
   var checker1 = d.createElement('span'),
       checker2 = d.createElement('span');
   checker1.s = checker1.style;
@@ -41,7 +53,7 @@ var hasFont = (function (d) {
     return str.replace(/[\,\.\/\<\>\!\?\;\'\"\[\]\\\{\}\|\=\*\(\)\$\%\^\&]/g, '');
   }
 
-  return function (fontName) {
+  return function hasFont (fontName) {
     function check() {
       if ((checker1.offsetWidth === checker2.offsetWidth) && 
           (checker1.offsetHeight === checker2.offsetHeight)) {
@@ -75,4 +87,4 @@ var hasFont = (function (d) {
     removeChecker();
     return false;
   };
-}(document));
+}));
