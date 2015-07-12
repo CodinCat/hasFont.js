@@ -15,14 +15,12 @@ Usage
 
 ```javascript
 // only one global function: hasFont()
-hasFont(fontName)
+hasFont(fontName);
 
-// Some example
 if (hasFont('monaco')) {
-  someElement.style.fontSize = '10px';
+    element.style.fontSize = '10px';
 }
 else {
-  someElement.style.fontSize = '12px';
+    element.style.fontSize = '12px';
 }
 ```
-

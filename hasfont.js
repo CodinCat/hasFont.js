@@ -1,6 +1,5 @@
 /*
-  hasFont.js: https://github.com/MrOPR/hasFont.js
-  version: 1.1
+  hasFont.js: https://github.com/CodinCat/hasFont.js
 */
 (function (root, factory) {
 	if (typeof define === 'function' && define.amd) {

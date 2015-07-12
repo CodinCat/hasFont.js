@@ -1,6 +1,6 @@
 {
   "name": "has-font",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect a font is available or not",
   "main": "hasfont.js",
   "repository": {
