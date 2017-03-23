@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hasFont.js</title>
+  <style>
+    body {
+      background-color: #F6F6E0;
+      margin: 0;
+    }
+    h1 {
+      margin-left: 20px;
+    }
+    a {
+      color: #5c8c07;
+      text-decoration: none;
+    }
+    li {
+      -webkit-font-smoothing: antialiased;
+      font-family: -apple-system, system-ui, roboto, 'Segoe UI', sans-serif;
+      font-size: 20px;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1><a href="https://github.com/CodinCat/hasFont.js">hasFont.js</a></h1>
+  <ul>
+    <li v-for="font in fonts">{{ font }}: {{ hasFont(font) }}</li>
+  </ul>
+</div>
+<script src="./hasfont.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    fonts: [
+      'Helvetica Neue', 'Monaco', 'Open Sans',
+      'Fira Mono', 'Source Sans Pro', 'Proxima Nova',
+      'Consolas', 'Nunito Sans', 'Lato',
+      'Oswald', 'Roboto', 'Merriweather',
+      'PT Sans', 'PT Serif', 'Segoe UI'
+    ]
+  },
+  methods: {
+    hasFont
+  }
+})
+</script>
+</body>
+</html>
