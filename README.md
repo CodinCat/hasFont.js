@@ -1,10 +1,10 @@
 hasFont.js
 ==========
 
-a simple tool to check that the user has the font or not,
-and return a Boolean.
+A simple script to check that the user has the font or not. It's vanilla JavaScript, no dependency required.
 
-It's vanilla JavaScript, no dependency required.
+You can see it in action here: https://codincat.github.io/hasFont.js/
+
 
 Usage
 ==========
