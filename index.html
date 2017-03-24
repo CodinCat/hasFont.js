@@ -14,14 +14,18 @@
       margin-left: 20px;
     }
     a {
-      color: #5c8c07;
+      color: #8c7907;
       text-decoration: none;
+      border-bottom: 3px dashed #8c7907;
+    }
+    ul {
+      margin-top: 0;
     }
     li {
       -webkit-font-smoothing: antialiased;
       font-family: -apple-system, system-ui, roboto, 'Segoe UI', sans-serif;
       font-size: 20px;
-      line-height: 2;
+      line-height: 1.8;
     }
   </style>
 </head>
@@ -29,7 +33,9 @@
 <div id="app">
   <h1><a href="https://github.com/CodinCat/hasFont.js">hasFont.js</a></h1>
   <ul>
-    <li v-for="font in fonts">{{ font }}: {{ hasFont(font) }}</li>
+    <li v-for="font in fonts" :style="getStyle(font)">
+      {{ font }}: {{ hasFont(font) }}
+    </li>
   </ul>
 </div>
 <script src="./hasfont.min.js"></script>
@@ -40,6 +46,8 @@ new Vue({
   data: {
     fonts: [
       'Helvetica Neue', 'Monaco', 'Open Sans',
+      'Verdana', 'Times New Roman', 'Calibri',
+      'Comic Sans', 'Courier New', 'Georgia',
       'Fira Mono', 'Source Sans Pro', 'Proxima Nova',
       'Consolas', 'Nunito Sans', 'Lato',
       'Oswald', 'Roboto', 'Merriweather',
@@ -47,7 +55,12 @@ new Vue({
     ]
   },
   methods: {
-    hasFont
+    hasFont,
+    getStyle (font) {
+      var ff = `${font}, -apple-system, system-ui, roboto, 'Segoe UI', sans-serif`
+      var color = hasFont(font) ? '#299412' : '#da4e4e'
+      return `font-family: ${ff}; color: ${color}`
+    }
   }
 })
 </script>
